@@ -1275,3 +1275,172 @@ footer p:last-child {
     }
 
 }
+/* =========================
+   SURVEY RESULTS CHARTS
+========================= */
+
+.charts-section {
+    background: #f8fbff;
+}
+
+.charts-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.chart-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8eef5;
+}
+
+.chart-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.chart-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chart-wide {
+    grid-column: span 2;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 330px;
+}
+
+.rating-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.rating-summary div {
+    background: #f4f8fc;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+}
+
+.rating-summary strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.rating-summary span {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.data-note {
+    max-width: 1150px;
+    margin: 25px auto 0;
+    padding: 15px 20px;
+    background: #eef6ff;
+    border-left: 4px solid #4a90e2;
+    border-radius: 8px;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-wide {
+        grid-column: span 1;
+    }
+
+    .rating-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .chart-card {
+        padding: 20px;
+    }
+
+    .chart-container {
+        height: 280px;
+    }
+
+    .chart-card h3 {
+        font-size: 1.1rem;
+    }
+}
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.gallery-grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.gallery-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8eef5;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 20px;
+}
+
+.gallery-caption h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.gallery-caption p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: 380px;
+    }
+
+}
