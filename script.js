@@ -220,3 +220,249 @@ window.addEventListener("keydown", function (event) {
     }
 
 });
+/* =========================
+   SURVEY RESULTS CHARTS
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* AGE GROUP CHART */
+
+    const ageChart = document.getElementById("ageChart");
+
+    if (ageChart) {
+
+        new Chart(ageChart, {
+            type: "doughnut",
+
+            data: {
+                labels: [
+                    "60–65 years",
+                    "66–70 years",
+                    "Above 75 years"
+                ],
+
+                datasets: [{
+                    data: [7, 2, 1]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
+
+    }
+
+
+    /* DIGITAL LEARNING OUTCOMES */
+
+    const learningChart =
+        document.getElementById("learningChart");
+
+    if (learningChart) {
+
+        new Chart(learningChart, {
+            type: "bar",
+
+            data: {
+                labels: [
+                    "Smartphone Features",
+                    "WhatsApp",
+                    "Google Search",
+                    "UPI / QR Payments",
+                    "OTP & UPI PIN Safety",
+                    "Suspicious Links / Calls",
+                    "Digital Confidence"
+                ],
+
+                datasets: [{
+                    label: "Participants (%)",
+                    data: [100, 90, 100, 100, 100, 100, 90]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                indexAxis: "y",
+
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+
+                        ticks: {
+                            callback: function(value) {
+                                return value + "%";
+                            }
+                        }
+                    }
+                },
+
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw +
+                                    "% of participants";
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+
+    /* MOST USEFUL TOPICS */
+
+    const topicsChart =
+        document.getElementById("topicsChart");
+
+    if (topicsChart) {
+
+        new Chart(topicsChart, {
+            type: "bar",
+
+            data: {
+                labels: [
+                    "Smartphone Basics",
+                    "UPI / Payments",
+                    "Google / Internet",
+                    "Video Calling",
+                    "Online Services",
+                    "Cyber Safety"
+                ],
+
+                datasets: [{
+                    label: "Participants",
+                    data: [3, 2, 2, 1, 1, 1]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+    }
+
+
+    /* ACTIVITIES PARTICIPANTS ENJOYED */
+
+    const activitiesChart =
+        document.getElementById("activitiesChart");
+
+    if (activitiesChart) {
+
+        new Chart(activitiesChart, {
+            type: "doughnut",
+
+            data: {
+                labels: [
+                    "Practical Smartphone Demonstration",
+                    "WhatsApp Activity",
+                    "UPI / QR Demonstration",
+                    "Cyber-Safety Example"
+                ],
+
+                datasets: [{
+                    data: [5, 3, 1, 1]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        position: "bottom"
+                    }
+                }
+            }
+        });
+
+    }
+
+
+    /* TRAINING & TRAINER RATINGS */
+
+    const ratingsChart =
+        document.getElementById("ratingsChart");
+
+    if (ratingsChart) {
+
+        new Chart(ratingsChart, {
+            type: "bar",
+
+            data: {
+                labels: [
+                    "3 Stars",
+                    "4 Stars",
+                    "5 Stars"
+                ],
+
+                datasets: [
+                    {
+                        label: "Overall Training",
+                        data: [1, 3, 6]
+                    },
+
+                    {
+                        label: "Trainer Explanation",
+                        data: [1, 4, 5]
+                    }
+                ]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+
+    }
+
+});
